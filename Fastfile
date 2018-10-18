@@ -23,6 +23,6 @@ platform :ios do
   		platform: "ios",
   		target_folder: "Example",
   		file_name: "Localizable",
-  		languages: ["en", "de])
+  		languages: ["en", "de"])
   end
 end
