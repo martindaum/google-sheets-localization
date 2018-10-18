@@ -4,8 +4,8 @@ module Fastlane
       def self.run(params)
        	require 'google/apis/sheets_v4'
       	require 'googleauth'
-				require 'googleauth/stores/file_token_store'
-				require 'fileutils'
+	require 'googleauth/stores/file_token_store'
+	require 'fileutils'
 
         protected_keys = ["key", "description"]
         credentials_file = ".credentials.json"
