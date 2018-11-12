@@ -116,6 +116,7 @@ module Fastlane
 
         def self.build_android_row(key, value)
           value.gsub! "&", "&amp;"
+	  value.gsub! "%%", "%"
           value.gsub! "\n", "\\n"
           value.gsub! "'", "\\\'"
           value.gsub! "\"", "\\\""
