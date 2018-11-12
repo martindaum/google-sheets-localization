@@ -4,7 +4,10 @@
 https://docs.google.com/spreadsheets/d/1i5CleqSzWv9e4Tfwgw5DVumI6CPjnBb3VvBxZcQGHrE/edit?usp=sharing
 
 * Use fastlane in your project. 
-* Move the ruby file to fastlane/actions
+* Add the plugin to your Gemfile
+
+gem "fastlane-plugin-google_sheet_localization", git: "https://github.com/martindaum/google-sheets-localization.git"
+
 * Copy the lane form the provided fastfile
 * Allow API access for Google Sheets:
 https://developers.google.com/sheets/api/quickstart/ruby
