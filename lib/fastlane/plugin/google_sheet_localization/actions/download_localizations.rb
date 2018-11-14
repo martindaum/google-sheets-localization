@@ -117,9 +117,9 @@ module Fastlane
         def self.build_android_row(key, value)
           value.gsub! "&", "&amp;"
           value.gsub! "\n", "\\n"
-          value.gsub! "'", "\\'"
+          value.gsub! "'", "\\\'"
           value.gsub! "\"", "\\\""
-	  value.gsub! "%%", "%"
+	        value.gsub! "%%", "%"
           value.gsub! "...", "…"
           return "    <string name=\"" + key + "\">" + value + "</string>\n"
         end
@@ -145,7 +145,7 @@ module Fastlane
           if type == "ios"
             return ""
           else
-            return "<resources>\n"
+            return "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<resources>\n"
           end
         end
 
