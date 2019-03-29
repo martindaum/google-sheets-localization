@@ -33,7 +33,7 @@ module Fastlane
         sheet_data = response.values
 
         headers = sheet_data.first
-        languages = headers.select { |key| !protected_keys.include? key.downcase }
+        languages = headers.select { |key| key.length == 2 }
         unless allowed_languages.nil?
           languages = languages.select { |key| allowed_languages.include? key }
         end
