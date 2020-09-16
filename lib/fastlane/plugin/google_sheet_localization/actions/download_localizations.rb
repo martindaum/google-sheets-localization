@@ -70,7 +70,9 @@ module Fastlane
             end
 		  
             if value.nil? || value.empty?
-              file_content += "\n"
+	      if description == nil
+                file_content += "\n"
+	      end
               next
             end
 
