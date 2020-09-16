@@ -65,14 +65,15 @@ module Fastlane
               description = row.last
             end
 
+	    if description != nil
+              file_content += self.build_comment(description, type)
+            end
+		  
             if value.nil? || value.empty?
               file_content += "\n"
               next
             end
 
-            if description != nil
-              file_content += self.build_comment(description, type)
-            end
             file_content += self.build_row(key, value, type)
           end
           file_content += self.file_suffix(type)
