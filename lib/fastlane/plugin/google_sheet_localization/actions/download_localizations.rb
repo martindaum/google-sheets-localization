@@ -64,16 +64,18 @@ module Fastlane
             if row.count == headers.count
               description = row.last
             end
-
-	    if description != nil
-              file_content += self.build_comment(description, type)
-            end
 		  
             if value.nil? || value.empty?
-	      if description == nil
+              if !key.nil? && !key.empty?
+                file_content += self.build_comment(key, type) 
+              else
                 file_content += "\n"
-	      end
+              end
               next
+            end
+            
+            if description != nil
+              file_content += self.build_comment(description, type)
             end
 
             file_content += self.build_row(key, value, type)
