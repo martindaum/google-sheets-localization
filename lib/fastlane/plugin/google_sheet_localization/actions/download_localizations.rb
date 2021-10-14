@@ -126,6 +126,8 @@ module Fastlane
           value.gsub! "'", %q(\\\')
           value.gsub! "\"", "\\\""
           value.gsub! "...", "…"
+          value.gsub! "<", "&lt;"
+          value.gsub! ">", "&gt;"
           return "    <string name=\"" + key + "\">" + value + "</string>\n"
         end
 
