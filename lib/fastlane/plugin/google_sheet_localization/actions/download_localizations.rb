@@ -2,8 +2,8 @@ module Fastlane
   module Actions
     class DownloadLocalizationsAction < Action
       def self.run(params)
-	require 'google/apis/sheets_v4'
-      	require 'googleauth'
+	require 'google/apis'
+  require 'googleauth'
 	require 'googleauth/stores/file_token_store'
 	require 'fileutils'
 
