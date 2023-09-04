@@ -128,6 +128,7 @@ module Fastlane
           value.gsub! "...", "…"
           value.gsub! "<", "&lt;"
           value.gsub! ">", "&gt;"
+          value.gsub! "²", "<sub>2</sub>"
           return "    <string name=\"" + key + "\">" + value + "</string>\n"
         end
 
